@@ -2,6 +2,7 @@ header {
   max-width: 375px;
   width: 100%;
   padding: .75rem 1.5rem;
+  margin-inline: auto;
 
   display: flex;
   justify-content: space-between;
@@ -49,7 +50,7 @@ header {
 
 @media (width >= 80em) {
   header {
-    max-width: 100%;
+    max-width: 80em;
     padding: .75rem 2rem;
   }
 }

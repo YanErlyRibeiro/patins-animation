@@ -27,7 +27,7 @@
 }
 
 html, button {
-  font: 500 1rem/1.5 var(--font-base);
+  font: 500 1rem/1.5 var(--ff-base);
 }
 
 h1, h2 {
