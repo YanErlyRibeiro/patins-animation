@@ -3,34 +3,56 @@ section.hero {
   width: 100%;
   margin-inline: auto;
   padding: 1rem 1.5rem 3rem;
+  
  
   & > div:first-of-type {
+    display: flex;
+    justify-content: center;
     margin-bottom: 2rem;
     position: relative;
+    /* & img {
+      width: 100%;
+    } */
     & img[src*="Ellipse"]{     
       width: 18.46rem;
       height: 18.46rem;    
       position: relative;
 
+      transform: translate(200%);
+      animation: slideIn 3s 200ms ease forwards;
       }
       & img[src*="patins"] {
         position: absolute;
         top: 0;
         width: 19.5rem;
-        left: -1rem;
+        left: .5rem;
+        z-index: 1;
+        transform: translate(200%);
+        animation: slideIn 3s ease forwards;
+      }
+
+      & img[src*="Stars-1"] {
+        position: absolute;
+        top: 28%;
+        left: .8rem;
+        width: 3.5rem;
+        z-index: 0;
+
+        opacity: 0;
+        transform: translateX(400%);
+        animation: slideIn 2s 800ms  forwards, appear 100ms 800ms forwards;
       }
 
       & img[src*="Stars-2"] {
         position: absolute;
-        top: 44%;
-        right: 6.6%;
+        top: 50%;
+        right: 2%;
         width: 1.59rem;
-      }
-      & img[src*="Stars-1"] {
-        position: absolute;
-        top: 28%;
-        left: -0.2rem;
-        width: 3.5rem;
+       
+
+    
+        transform: translateX(400%);
+        animation: slideIn 3s 200ms ease forwards;
       }
 }  
 
@@ -60,7 +82,7 @@ section.hero {
 & h1 span {
   display: block;
 
-  animation: slideUp 6s infinite ease;
+  animation: slideUp 5s 2s infinite ease;
 }
 
 /*buttons*/
@@ -111,6 +133,27 @@ section.hero {
       ;
   }
 }
+
+/* patins*/
+
+
+}
+
+@keyframes slideIn {
+
+  50% {
+    transform: translate(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
