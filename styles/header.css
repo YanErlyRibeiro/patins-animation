@@ -49,8 +49,9 @@ header.top {
 }
 
 @media (width >= 80em) {
-  header {
+  header.top {
     max-width: 80em;
     padding: .75rem 2rem;
+    
   }
 }
